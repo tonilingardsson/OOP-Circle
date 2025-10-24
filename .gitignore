@@ -1,0 +1,6 @@
+*.sln
+*OOP-Circle.*
+project.*
+.NETCoreApp,Version=v8.*
+apphost
+*/bin/*
