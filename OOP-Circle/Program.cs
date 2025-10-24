@@ -17,6 +17,18 @@ class Circle // US3
     {
         return _radius * _radius * _pi;
     }
+
+    // Extra: calculate the perimeter = 2 x π x radius
+    public float GetPerimeter()
+    {
+        return 2 * _pi * _radius;
+    }
+
+    // Extra: calculate volume if it's 3D, a sphere
+    public float GetVolume()
+    {
+        return (4f/3f) * _pi * _radius* _radius* _radius;
+    }
 }
 
 class Program
@@ -31,8 +43,20 @@ class Program
         float area1 = circle1.GetArea();
         float area2 = circle2.GetArea();
 
+        // Extra: calculate perimeters for circle1 and circle2
+        float perimeter1 = circle1.GetPerimeter();
+        float perimeter2 = circle2.GetPerimeter();
+
+        // Extra: calculate perimeters for circle1 and circle2
+        float volume1 = circle1.GetVolume();
+        float volume2 = circle2.GetVolume();
+
         Console.WriteLine($"Area för cirkel med radie 5 är: {area1}");
         Console.WriteLine($"Area för cirkel med radie 6 är: {area2}");
+        Console.WriteLine($"Perimeter för cirkel med radie 5 är: {perimeter1}");
+        Console.WriteLine($"Perimeter för cirkel med radie 6 är: {perimeter2}");
+        Console.WriteLine($"Volume för cirkel med radie 5 är: {volume1}");
+        Console.WriteLine($"Volume för cirkel med radie 6 är: {volume2}");
 
         // Keep the console open
         Console.Read();
